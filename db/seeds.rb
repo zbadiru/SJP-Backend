@@ -88,7 +88,7 @@ Image.create([
         photoshoot_id: 3
     },
     {
-        image_url: "https://lh3.googleusercontent.com/pw/ACtC-3fqgkT2qo9RO7Mraa5-8PB5HVbeaGrVribrYLyeTMOl85Ttdo8alCirKzMfUG6KRK16g1TGr3CxGxl9Sh6PypvaQnDAoynYuG5BSB7XZLLlk3WLuVLyHUjwuX49wPjDTpPlJ4ReuQBQAdjSbMriXhLZ=w646-h970-no?authuser=0",
+        image_url: "https://res-console.cloudinary.com/sjpcreative/thumbnails/v1/image/upload/v1595252710/c2pwLzI3NEE0ODE3LVJlY292ZXJlZF9hemhhNzI=/preview",
         photoshoot_id: 3
     }
 ])

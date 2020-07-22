@@ -14,9 +14,8 @@ class ImagesController < ApplicationController
     end
 
     def create
-        @image = Image.new(image_params)
-
-        if @image.save
+        @image = Image.create(image_params)
+        if @image.valid?
             render json: @image, status: :created, location: @image
         else
             render json: @image.errors, status: :unprocessable_entity
@@ -43,6 +42,6 @@ class ImagesController < ApplicationController
     end
 
     def image_params
-        params.require(:image).permit(:image_url)
+        params.require(:image).permit(:image_url, :photoshoot_id)
     end
 end

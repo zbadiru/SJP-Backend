@@ -43,6 +43,6 @@ class PhotoshootsController < ApplicationController
     end
 
     def photoshoot_params
-        params.require(:photoshoot).permit(:name, :before_image_id, :after_image_id)
+        params.require(:photoshoot).permit(:name, :portfolio_id)
     end
 end
