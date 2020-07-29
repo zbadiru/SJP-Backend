@@ -10,6 +10,7 @@ User.destroy_all
 Portfolio.destroy_all
 Photoshoot.destroy_all
 Image.destroy_all
+Merchandise.destroy_all
 
 User.create([
     {
@@ -49,42 +50,26 @@ Photoshoot.create([
 ])
 
 
-# response = RestClient.get "https://photos.app.goo.gl/joXc6AVSFAHgA3a1A"
-# byebug
-
-# json = JSON.parse response.body
-# byebug
-
-# if !json.nil?
-#     json["data"].map do |image|
-#         Image.create(id: "#{image["index"]}")
-#     end
-# else
-#     put "error seeding images"
-# end
-
-
-
 
 Image.create([
     {
-        image_url: "https://res.cloudinary.com/sjpcreative/image/upload/v1595252285/11th_February_202000971-2_jqi9qr.jpg",
+        image_url: "https://res-console.cloudinary.com/sjpcreative/thumbnails/v1/image/upload/v1595252376/c2pwL0hhaXIubWFnX29idjFtZg==/preview",
         photoshoot_id: 1
     },
     {
-        image_url: "https://res.cloudinary.com/sjpcreative/image/upload/v1595252290/12_rqhuji.jpg",
+        image_url: "https://res-console.cloudinary.com/sjpcreative/thumbnails/v1/image/upload/v1595252761/c2pwL0lNR184Mjg1LTJfeHViNHRh/preview",
         photoshoot_id: 1
     },
     {
-        image_url: "https://res.cloudinary.com/sjpcreative/image/upload/v1595252376/Hair.mag_obv1mf.jpg",
+        image_url: "https://res-console.cloudinary.com/sjpcreative/thumbnails/v1/image/upload/v1595252290/c2pwLzEyX3JxaHVqaQ==/preview",
         photoshoot_id: 2
     },
     {
-        image_url: "https://res.cloudinary.com/sjpcreative/image/upload/v1595252761/IMG_8285-2_xub4ta.jpg", 
+        image_url: "https://res-console.cloudinary.com/sjpcreative/thumbnails/v1/image/upload/v1595252285/c2pwLzExdGhfRmVicnVhcnlfMjAyMDAwOTcxLTJfanFpOXFy/preview", 
         photoshoot_id: 2
     },
     {
-        image_url: "https://res.cloudinary.com/sjpcreative/image/upload/v1595252603/274A4830.rawjpg_mtdpur.jpg",
+        image_url: "https://res-console.cloudinary.com/sjpcreative/thumbnails/v1/image/upload/v1595252603/c2pwLzI3NEE0ODMwLnJhd2pwZ19tdGRwdXI=/preview",
         photoshoot_id: 3
     },
     {
@@ -93,3 +78,37 @@ Image.create([
     }
 ])
 
+Merchandise.create([
+    {
+        name: "Key Ring",
+        img: "https://res-console.cloudinary.com/sjpcreative/thumbnails/v1/image/upload/v1595876981/c2pwIG1lcmNoYW5kaXNlL0tleV9SaW5nc19hbDh3ZGs=/preview",
+        price: 3.50,
+        inCart: false,
+        count: 0,
+        total: 0
+    },
+    {
+        name: "Coaster",
+        img: "https://res-console.cloudinary.com/sjpcreative/thumbnails/v1/image/upload/v1595877169/c2pwIG1lcmNoYW5kaXNlL0NvYXN0ZXJfcXRvZzYz/preview",
+        price: 4.00,
+        inCart: false,
+        count: 0,
+        total: 0
+    },
+    {
+        name: "Acrylice Photo Print 24 x 16",
+        img: "https://res-console.cloudinary.com/sjpcreative/thumbnails/v1/image/upload/v1595877321/c2pwIG1lcmNoYW5kaXNlL0FjcnlsaWNlX1Bob3RvX1ByaW50X3JxZWRnNA==/preview",
+        price: 150.00,
+        inCart: false,
+        count: 0,
+        total: 0
+    },
+    {
+        name: "Photo Frame 6 x 4",
+        img: "https://res-console.cloudinary.com/sjpcreative/thumbnails/v1/image/upload/v1595877563/c2pwIG1lcmNoYW5kaXNlL1Bob3RvX0ZyYW1lX2wwanhmbA==/preview",
+        price: 15.00,
+        inCart: false,
+        count: 0,
+        total: 0
+    }
+]);

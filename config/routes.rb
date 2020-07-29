@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resources :portfolios
   resources :photoshoots
   resources :images
+  resources :merchandises
 end
